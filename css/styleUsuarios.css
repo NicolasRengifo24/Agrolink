@@ -1,0 +1,71 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* === BARRA DE NAVEGACIÓN (NAVBAR) === 
+
+.barranav {
+    grid-column: span 8 / span 8;
+}
+
+.navbar-custom {
+    font-family: 'Chewy', cursive;
+}
+
+/* color de los  textos del navbar */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .form-control,
+.navbar-dark {
+    color:#c6dc93; 
+}
+
+
+
+
+/* === FORMULARIOS === */
+.input-servicio {
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+/* === TARJETAS DE SERVICIOS === */
+.card-servicio {
+  background-color: white;
+  border: 1px solid #C2C2C2;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
+.servicio-card {
+  background-color: #fafafa;
+  border: 1px solid #E2E2E2;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.servicio-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: scale(1.01);
+}
+
+.servicio-card .detalle {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255,255,255,0.95);
+  z-index: 10;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #C2C2C2;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}

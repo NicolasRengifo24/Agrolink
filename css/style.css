@@ -203,7 +203,7 @@ div{
     grid-column: 1 / -1; /* Ocupa desde la primera hasta la última columna */
     align-self: end; /* Alinea al final de la celda grid */
     padding: 1rem;
-    background: #1a512e; /* Color de fondo opcional */
+    background: #1a512e; 
     border-top: 1px solid #dee2e6; 
     text-align: center;
     color: #c6dc93;
