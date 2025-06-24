@@ -1,6 +1,6 @@
 // Función para crear una nueva tarjeta
-    function crearTarjeta(titulo, ubicacion, descripcion) {
-      const nuevaTarjeta = `
+function crearTarjeta(titulo, ubicacion, descripcion) {
+    const nuevaTarjeta = `
         <div class="col-md-6">
           <div class="card shadow-sm">
             <div class="card-body view-mode">
@@ -33,64 +33,69 @@
         </div>
       `;
 
-      document.getElementById('contenedor-tarjetas').insertAdjacentHTML('beforeend', nuevaTarjeta);
-      asignarEventosATarjeta(document.getElementById('contenedor-tarjetas').lastElementChild);
-    }
+    document.getElementById('contenedor-tarjetas').insertAdjacentHTML('beforeend', nuevaTarjeta);
+    asignarEventosATarjeta(document.getElementById('contenedor-tarjetas').lastElementChild);
+}
 
-    // Función para asignar eventos a una tarjeta
-    function asignarEventosATarjeta(tarjeta) {
-      // Editar
-      tarjeta.querySelector('.edit-btn')?.addEventListener('click', (e) => {
+// Función para asignar eventos a una tarjeta
+function asignarEventosATarjeta(tarjeta) {
+    // Editar
+    tarjeta.querySelector('.edit-btn')?.addEventListener('click', (e) => {
         const card = e.target.closest('.card');
         card.querySelector('.view-mode').style.display = 'none';
         card.querySelector('.edit-mode').style.display = 'block';
-      });
+    });
 
-      // Cancelar edición
-      tarjeta.querySelector('.cancel-btn')?.addEventListener('click', (e) => {
+    // Cancelar edición
+    tarjeta.querySelector('.cancel-btn')?.addEventListener('click', (e) => {
         const card = e.target.closest('.card');
         card.querySelector('.edit-mode').style.display = 'none';
         card.querySelector('.view-mode').style.display = 'block';
-      });
+    });
 
-      // Guardar cambios
-      tarjeta.querySelector('.edit-form')?.addEventListener('submit', (e) => {
+    // Guardar cambios
+    tarjeta.querySelector('.edit-form')?.addEventListener('submit', (e) => {
         e.preventDefault();
         const card = e.target.closest('.card');
         const inputs = e.target.querySelectorAll('input, textarea');
-        
+
         card.querySelector('.card-title').textContent = inputs[0].value;
         card.querySelectorAll('.card-text')[0].innerHTML = `<strong>Ubicación:</strong> ${inputs[1].value}`;
         card.querySelectorAll('.card-text')[1].innerHTML = `<strong>Descripción:</strong> ${inputs[2].value}`;
-        
+
         card.querySelector('.edit-mode').style.display = 'none';
         card.querySelector('.view-mode').style.display = 'block';
-      });
+    });
 
-      // Eliminar tarjeta
-      tarjeta.querySelector('.delete-btn')?.addEventListener('click', (e) => {
+    // Eliminar tarjeta
+    tarjeta.querySelector('.delete-btn')?.addEventListener('click', (e) => {
         if (confirm('¿Estás seguro de eliminar este servicio?')) {
-          e.target.closest('.col-md-6').remove();
+            e.target.closest('.col-md-6').remove();
         }
-      });
-    }
+    });
+}
 
-    // Evento para el formulario de publicación
-    document.getElementById('formPublicar').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const titulo = e.target.querySelector('input[placeholder="Título del servicio"]').value;
-      const ubicacion = e.target.querySelector('input[placeholder="Ubicación"]').value;
-      const descripcion = e.target.querySelector('textarea').value;
+// Evento para el formulario de publicación
+document.getElementById('formPublicar').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const titulo = e.target.querySelector('input[placeholder="Título del servicio"]').value;
+    const ubicacion = e.target.querySelector('input[placeholder="Ubicación"]').value;
+    const descripcion = e.target.querySelector('textarea').value;
 
-      if (titulo && ubicacion && descripcion) {
+    if (titulo && ubicacion && descripcion) {
         crearTarjeta(titulo, ubicacion, descripcion);
         e.target.reset();
-      } else {
+    } else {
         alert('Por favor completa todos los campos requeridos.');
-      }
-    });
+    }
+});
 
-    // Asignar eventos a las tarjetas existentes al cargar la página
-    document.querySelectorAll('.col-md-6').forEach(tarjeta => {
-      asignarEventosATarjeta(tarjeta);
-    });
+// Asignar eventos a las tarjetas existentes al cargar la página
+document.querySelectorAll('.col-md-6').forEach(tarjeta => {
+    asignarEventosATarjeta(tarjeta);
+});
+
+
+
+
+

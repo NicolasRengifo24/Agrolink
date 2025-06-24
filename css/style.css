@@ -4,7 +4,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; /* Cabecera - contenido - footer */
     margin: 0;
-    background: url(../img/fondo.jpg) no-repeat  center center fixed ;
+    background: url(../img/light_green_paint_background.jpg) no-repeat  center center fixed ;
     
 }
 
@@ -49,6 +49,12 @@ div{
 .card{
     width: 14rem;
     height: 500px;
+     transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .card img{
     width: auto; 
@@ -81,7 +87,7 @@ div{
     align-items: center;
     display: grid;
     place-items: center;
-    background : linear-gradient(#63a91f,#c6dc93);
+    background : #1a512e;
     
     width: 100%;
     
@@ -89,8 +95,8 @@ div{
 }
 .letrero h2{
     font-family: "Permanent Marker", cursive;
-    font-size: 35px; /* Puedes ajustar el tamaño */
-    color: #1a512e; /* Color que usaste en el navbar */
+    font-size: 40px; 
+    color: #c6dc93; 
     text-align: center;
     margin: 1rem 0;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
