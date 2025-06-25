@@ -16,28 +16,24 @@ body {
 
 
 /* Navbar */
-.barranav .navbar {
-  Background : #1a512e
+.barranav {
+    grid-column: span 8 / span 8;
 }
 
+.navbar-custom {
+    font-family: 'Chewy', cursive;
+}
+
+/* color de los  textos del navbar */
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .form-control,
 .navbar-dark .btn-outline-light {
-    color:#c6dc93
-
+    color:#c6dc93; 
 }
 
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-
-
-.navbar-nav .nav-link:hover {
-  text-decoration: underline;
+.navbar-dark .dropdown-item{
+    color: black;
 }
 
 /* Imagen principal del producto */
@@ -59,7 +55,7 @@ body {
 .contenedor_info {
   max-width: 900px;
   margin: 30px auto;
-  background-color: #b0d3bf;
+  background-color: #c6dc93;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 30px;
@@ -96,14 +92,14 @@ body {
   padding: 8px 10px;
   font-size: 14px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #388e3c;
   width: 150px;
 }
 
 .div33 .Comprar_ahora,
 .div34 .Agregar_al_carrito {
-  background-color:#97f4ae;
-  color: #212121;
+  background-color:#1a512e;
+  color: #c6dc93;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -114,7 +110,7 @@ body {
 
 .div33 .Comprar_ahora:hover,
 .div34 .Agregar_al_carrito:hover {
-  background-color: #b0d3bf ;
+  background-color: #388e3c ;
 }
 
 .Products_Similar {      
@@ -131,8 +127,8 @@ body {
 .cont_producto_7,
 .cont_producto_8 {
   width: 180px;
-  background-color: #b0d3bf;
-  border: 1px solid #97f4ae;
+  background-color: #c6dc93;
+  border: 1px solid #1a512e;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
