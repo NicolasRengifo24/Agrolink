@@ -1,0 +1,15 @@
+
+from django.urls import path
+from . import views
+
+
+
+
+urlpatterns = [
+    path('', views.inicio, name='inicio'),
+    path("productos/", views.mostrar_productos, name="mostrar_productos"),
+    path('producto/<int:id>/', views.detalle_producto, name='detalle_producto'),
+] 
+
+
+
